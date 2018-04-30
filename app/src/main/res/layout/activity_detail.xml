@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.udacity.sandwichclub.DetailActivity">
+    <!-- I use a scroll view to house the entire layout -->
+    <!-- scrollview can only have one direct child -> usually the layout manager -->
+    <!-- The first part of the layout manager only holds the picture and the  description pulled from api -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/sandwich_picture_content_description"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            style="@style/detail_text_label"
+            android:id="@+id/description_label_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_description_label" />
+
+        <TextView
+            style="@style/secondary_text"
+            android:id="@+id/description_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/description_padding_bottom"
+            tools:text="@string/detail_description_label" />
+
+        <!-- This linear layout houses the section listing alternative names for the sandwich -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- I give both elements the same weight to have them take up the same amount of space in width -->
+            <TextView
+                style="@style/detail_text_label"
+                android:id="@+id/also_known_label_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/detail_also_known_as_label" />
+
+            <TextView
+                style="@style/detail_text"
+                android:id="@+id/also_known_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="@string/detail_also_known_as_label" />
+
+        </LinearLayout>
+        <!-- Similar idea here as for the alternative names section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/detail_text_label"
+                android:id="@+id/ingredients_label_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/detail_ingredients_label" />
+
+            <TextView
+                style="@style/detail_text"
+                android:id="@+id/ingredients_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/detail_ingredients_label" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/detail_text_label"
+                android:id="@+id/origin_label_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/detail_place_of_origin_label"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/detail_text"
+                android:id="@+id/origin_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="@string/detail_place_of_origin_label" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
