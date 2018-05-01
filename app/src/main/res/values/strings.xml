@@ -14,7 +14,7 @@
     <string name="detail_dummy_also_known">Also Known</string>
 
     <!-- Content descriptions-->
-    <string name="sandwich_picture_content_description">Sandwich picture</string>
+    <string name="content_description_sandwich_picture">Sandwich picture</string>
 
     <!-- Error messages-->
     <string name="detail_error_message">Sandwich data not available</string>
